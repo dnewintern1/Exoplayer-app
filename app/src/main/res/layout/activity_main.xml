@@ -9,6 +9,19 @@
     <androidx.media3.ui.PlayerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/playerView"/>
+        android:id="@+id/playerView"
+        app:use_controller="true"
+        app:controller_layout_id="@layout/my_controller">
+    </androidx.media3.ui.PlayerView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/myfab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/baseline_download_for_offline_24"
+            android:layout_alignParentTop="true"/>
+
+
 
 </RelativeLayout>

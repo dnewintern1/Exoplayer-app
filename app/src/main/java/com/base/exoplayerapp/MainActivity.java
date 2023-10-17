@@ -2,10 +2,12 @@ package com.base.exoplayerapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.media3.common.MediaItem;
+import androidx.media3.common.Player;
 import androidx.media3.exoplayer.ExoPlayer;
 import androidx.media3.ui.PlayerView;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,12 +18,17 @@ public class MainActivity extends AppCompatActivity {
            "https://opengameart.org/sites/default/files/Enterin%20The%20Skies.mp3",
     "https://opengameart.org/sites/default/files/Ove%20Melaa%20-%20Hero%20Within.mp3"};
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         playerView = findViewById(R.id.playerView);
+
 
         mSimpleExoPlayer = new ExoPlayer.Builder(this).build();
         playerView.setPlayer(mSimpleExoPlayer);
